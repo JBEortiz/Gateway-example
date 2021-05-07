@@ -1,0 +1,2 @@
+INSERT INTO `juegos` (titulo, name, cagetory, price) VALUES ('juan','$2a$10$hdTaz3vfnc2ikq7EiUyjXO1ImAN6BrEomAno0hToE7bhBAKTeJyhC','juan',1);
+INSERT INTO `juegos` (titulo, name, cagetory, price) VALUES ('pepe','$2a$10$hdTaz3vfnc2ikq7EiUyjXO1ImAN6BrEomAno0hToE7bhBAKTeJyhC','juan',1);

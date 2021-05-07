@@ -27,18 +27,18 @@ public class JuegoController {
 	private JuegoMapper mapper;	
 
 	@GetMapping("/listar")
-	public ResponseEntity<List<JuegoDto>> listar(){
+	public ResponseEntity<List<Juego>> listar(){
 		
 		List<Juego> juegos = repository.findAll();
-		List<JuegoDto> juegosDto = mapper.dtosToEntitys(juegos);
+		//List<JuegoDto> juegosDto = mapper.dtosToEntitys(juegos);
 		if (juegos.isEmpty()) {
 			throw new EntityNotFoundException("la lista de usuarios esta vacia");
 		}
-		return ResponseEntity.ok(juegosDto);
+		return ResponseEntity.ok(juegos);
 	}
 	
 	@GetMapping("/listar/{id}")
-	public ResponseEntity<JuegoDto> findById(@PathVariable Long id) {
+	public ResponseEntity<Juego> findById(@PathVariable Long id) {
 		
 		JuegoDto juegosDto =null;
 		Juego juegos = null;
@@ -46,10 +46,10 @@ public class JuegoController {
 			new EntityNotFoundException("id no encontrado");
 		}else {
 			juegos = repository.findById(id).get();
-			 juegosDto = mapper.entityToDto(juegos);
+			// juegosDto = mapper.entityToDto(juegos);
 		}
 		
-		return ResponseEntity.ok(juegosDto);
+		return ResponseEntity.ok(juegos);
 	}
 	
 	@PostMapping("/crear")

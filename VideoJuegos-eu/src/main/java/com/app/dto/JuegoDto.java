@@ -1,8 +1,6 @@
 package com.app.dto;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
@@ -10,7 +8,7 @@ import lombok.Setter;
 public class JuegoDto {
 
 	private String titulo;
-	private String name;
-	private String cagetory;
-	private int price;
+	private String nombre;
+	private String categoria;
+	private int precio;
 }
